@@ -27,7 +27,6 @@
       <div class="container">
       <div class="bs-component">
               <div class="alert alert-dismissible alert-warning">
-                <button type="button" class="close" data-dismiss="alert">×</button>
                 <h4>Note!</h4>
                 <p>This is a login page for website admins. User accounts do not exist (yet)!</p>
               </div>

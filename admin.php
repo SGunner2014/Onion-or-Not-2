@@ -69,21 +69,9 @@
 
 </table> 
 <nav>
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">...</a></li>
-    <li><a href="#">million</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
+  <ul class="pager">
+    <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Newer</a></li>
+    <li class="next"><a href="#">Older<span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
 </div>
@@ -125,21 +113,9 @@
 </table> 
 </table> 
 <nav>
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">...</a></li>
-    <li><a href="#">million</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
+  <ul class="pager">
+    <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Newer</a></li>
+    <li class="next"><a href="#">Older<span aria-hidden="true">&rarr;</span></a></li>
   </ul>
 </nav>
 </div>

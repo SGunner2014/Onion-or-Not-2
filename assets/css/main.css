@@ -1,4 +1,15 @@
 @import url('bootstrap.min.css');
 
 /* Add custom CSS AFTER here */
+.playButton {
+	display: block;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+}
 
+.playAgain {
+	display:none;
+}

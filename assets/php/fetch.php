@@ -5,7 +5,7 @@
 
 ob_start();
 
-$conn = new mysqli("localhost", "root", "Minecon2013", "onionornot");
+$conn = new mysqli("localhost", "root", "PASSWORD_HERE", "onionornot");
 if ($conn->connect_error) {
 	echo "Connection failed. Please reload page.";
 }

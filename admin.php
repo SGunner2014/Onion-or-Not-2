@@ -22,7 +22,7 @@
       </nav>
       <div class="container">
       <h1>Admin Panel</h1>
-      <h2>Edit articles in Pool</h2>
+      <h2>Enabled articles</h2>
       <table class="table table-striped table-hover ">
         <thead>
           <tr>
@@ -61,9 +61,81 @@
             </td>
           </tr>
   </tbody>
+
 </table> 
+<nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">...</a></li>
+    <li><a href="#">million</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+      <h2>Disabled articles</h2>
+      <table class="table table-striped table-hover ">
+        <thead>
+          <tr>
+            <th class="col-sm-1">#</th>
+            <th class="col-sm-3">Title</th>
+            <th class="col-sm-2">URL</th>
+            <th class="col-sm-1">Onion?</th>
+            <th class="col-sm-1">NSFW?</th>
+            <th class="col-sm-4">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>British astronaut to run London Marathon in space</td>
+            <td><a href="http://olympics.nbcsports.com/2015/12/04/british-astronaut-london-marathon-space-tim-peake/">http://olympics.nbcsports.com/2015/12/04/briti...</td>
+            <td>No</td>
+            <td>No</td>
+            <td>
+              <a href="#" class="btn btn-success btn-xs">Add</a>
+            </td>
 
-
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>British astronaut to run London Marathon in space</td>
+            <td><a href="http://olympics.nbcsports.com/2015/12/04/british-astronaut-london-marathon-space-tim-peake/">http://olympics.nbcsports.com/2015/12/04/briti...</td>
+            <td>No</td>
+            <td>No</td>
+            <td>
+              <a href="#" class="btn btn-success btn-xs">Add</a>
+            </td>
+          </tr>
+  </tbody>
+</table> 
+</table> 
+<nav>
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">...</a></li>
+    <li><a href="#">million</a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
     </div>
     <!-- Display at start -->
       <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>

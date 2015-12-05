@@ -1,8 +1,6 @@
 <!DOCTYPE html>
   <html>
     <head>
-    <!-- Import google font thing -->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- Import css -->
       <link rel="stylesheet" href="assets/css/main.css"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">

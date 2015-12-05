@@ -42,7 +42,7 @@
       </form>
     </div>
     <hr/>
-    <div class="container footer">
+    <div class="container well navbar-fixed-bottom">
       <div class="col-sm-2">
         <h3>Useful Links</h3>
         <a href="https://twitter.com/JamesHurc"><h6>ElephantLocator's Twitter</h6></a>
@@ -57,7 +57,7 @@
         <h3>The boring, legal stuff</h3>
         <h6>Copyright &copy; 2015, Sam Gunner &amp; James Hurcomb. Do not redistribute or modify without express permission from the copyright holders.</h6>
       </div>
-    <div>
+    </div>
     <!-- Display at start -->
       <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
       <script type="text/javascript" src="assets/js/materialize.min.js"></script>

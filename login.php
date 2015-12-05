@@ -41,7 +41,6 @@
         </div>
       </form>
     </div>
-    <hr/>
     <div class="container well navbar-fixed-bottom">
       <div class="col-sm-2">
         <h3>Useful Links</h3>

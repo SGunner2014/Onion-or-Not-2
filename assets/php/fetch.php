@@ -56,7 +56,7 @@ function articleExists($art, $conn) { //Returns boolean, true if it exists, fals
 	$results1 = $conn->query($query);
 	$query = "SELECT * FROM `articles_enabled` WHERE `Title` = '".$art['data']['title']."'";
 	$results2 = $conn->query($query);
-	if (mysqli_num_rows($results1) >= 1 and mysqli_num_rows($results2) >= 1) {
+	if (mysqli_num_rows($results1) >= 1 or mysqli_num_rows($results2) >= 1) {
 		return true;
 	}else{
 		return false;

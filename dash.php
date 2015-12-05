@@ -17,7 +17,6 @@
          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
             <li><a href="index.html"><i class="fa fa-play"></i></a></li>
-            <li><a href="about.html"><i class="fa fa-question"></i></a></li>
             <li><a href="https://github.com/SGunner2014/Onion-or-Not-2"><i class="fa fa-github"></i></a></li>
             <li><a href="login.php"><i class="fa fa-sign-in"></i></a></li>
             </ul>

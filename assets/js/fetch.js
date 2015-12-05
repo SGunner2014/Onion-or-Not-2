@@ -10,5 +10,5 @@ var getArticle = function() {
 
 	xhttp.open("POST", "http://onionornot.net/assets/php/fetch.php", true);
 	xhttp.send();
-	mainResponse.text(xhttp.resposeText);
+	$('.mainResponse').text(xhttp.resposeText);
 }

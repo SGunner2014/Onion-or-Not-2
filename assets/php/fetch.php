@@ -3,6 +3,10 @@
   //A PHP script to fetch, return and possibly store the latest headlines from the /r/onion and /r/notonion subreddits.
 
 
+ob_end_clean();
+header("Connection: close\r\n");
+header("Content-Encoding: none\r\n");
+ignore_user_abort(true); // optional
 ob_start();
 
 $conn = new mysqli("localhost", "root", "password", "onionornot");
@@ -65,7 +69,7 @@ function articleExists($art, $conn) { //Returns boolean, true if it exists, fals
 
 function getArticle($conn) { //Fetch article, display to user.
 
-	$query = "SELECT * FROM `articles_enabled` WHERE ID >= (SELECT FLOOR( MAX(ID) * RAND()) FROM `articles_enabled` ) ORDER BY ID LIMIT 1";
+	$query = "SELECT * FROM `articles_enabled` ORDER BY RAND() LIMIT 1";
 
 	$result = $conn->query($query); 
 	foreach ($result as $rec) {
@@ -77,10 +81,15 @@ function getArticle($conn) { //Fetch article, display to user.
 
 
 
-echo json_encode(getArticle($conn));
-header("Content-Length: ".ob_get_length());
-header("Connection: close");
-ob_end_flush();
+$str = json_encode(getArticle($conn));
+echo $str;
+
+
+$size = ob_get_length();
+header("Content-Length: $size");
+ob_end_flush();     // Strange behaviour, will not work
+flush();            // Unless both are called !
+ob_end_clean();
 
 $array = getTitles();
 foreach ($array as $rec) {

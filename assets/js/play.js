@@ -1,18 +1,18 @@
 $(document).ready(function() {
 
-	$('.playButton').click(function() {
+	$('.playButton-btn').click(function() {
 		$('.playButton').slideUp();
 		getArticle();
 		$('.options').fadeIn();
 	});
 
 	$('.yes').click(function() {
-		$('.options').fadeOut();
+		$('.options').hide();
 		$('.playAgain').fadeIn();
 	});
 
 	$('.no').click(function() {
-		$('.options').fadeOut();
+		$('.options').hide();
 		$('.playAgain').fadeIn();
 	});
 

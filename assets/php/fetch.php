@@ -19,8 +19,14 @@ function getTitles() {
 	return $array;
 }
 
-	function getArticle() {
+function getArticle() { //Fetch article, display to user.
+	$conn = new mysqli("127.0.0.1", "database", "Password1234567890", "articles");
+	$query = "SELECT column FROM `allowed`
+	ORDER BY RAND()
+	LIMIT 1";
 
-	}
+	$result = $conn->query($query);
+	print_r($result);
+}
 
 ?>

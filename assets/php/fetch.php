@@ -5,7 +5,7 @@
 
 ob_start();
 
-$conn = new mysqli("localhost", "root", "PASSWORD_HERE", "onionornot");
+$conn = new mysqli("localhost", "root", "password", "onionornot");
 if ($conn->connect_error) {
 	echo "Connection failed. Please reload page.";
 }
@@ -13,7 +13,7 @@ if ($conn->connect_error) {
 function getTitles() {
 	$endArray = array();
 
-	$feed = file_get_contents('http://reddit.com/r/nottheonion.json?limit=10');
+	$feed = file_get_contents('http://reddit.com/r/nottheonion.json?limit=100');
 	$array = json_decode($feed, true)['data']['children'];
 	foreach ($array as $post) {
 		if (!($post['data']['domain'] === "self.nottheonion")) {
@@ -23,7 +23,7 @@ function getTitles() {
 		}
 	}
 
-	$feed = file_get_contents('http://reddit.com/r/TheOnion.json?limit=10');
+	$feed = file_get_contents('http://reddit.com/r/TheOnion.json?limit=100');
 	$array = json_decode($feed, true)['data']['children'];
 	foreach ($array as $post) {
 		if (!($post['data']['domain'] === "self.theonion")) {
@@ -65,12 +65,11 @@ function articleExists($art, $conn) { //Returns boolean, true if it exists, fals
 
 function getArticle($conn) { //Fetch article, display to user.
 
-	$query = "SELECT * FROM `articles_enabled` ORDER BY RAND() LIMIT 1";
+	$query = "SELECT * FROM `articles_enabled` WHERE ID >= (SELECT FLOOR( MAX(ID) * RAND()) FROM `articles_enabled` ) ORDER BY ID LIMIT 1";
 
-	$result = $conn->query($query);
+	$result = $conn->query($query); 
 	foreach ($result as $rec) {
-		$str = $rec['ID'] . "," . $rec['URL'] . "," . $rec["Title"] . "," . $rec["Onion"] . "," . $rec["NSFW"];
-		return $str;
+		return $rec;
 	}
 }
 
@@ -78,7 +77,7 @@ function getArticle($conn) { //Fetch article, display to user.
 
 
 
-echo getArticle($conn);
+echo json_encode(getArticle($conn));
 header("Content-Length: ".ob_get_length());
 header("Connection: close");
 ob_end_flush();

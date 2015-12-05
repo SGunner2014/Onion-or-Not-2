@@ -22,8 +22,13 @@
       </nav>
       <div class="container">
       <h1>Admin Panel</h1>
-      <h2>Enabled articles</h2>
-      <table class="table table-striped table-hover ">
+      <div class="container">
+    <ul class="nav nav-tabs">
+        <li class="nav active"><a href="#approved" data-toggle="tab">Approved</a></li>
+        <li class="nav"><a href="#denied" data-toggle="tab">Denied</a></li>
+    </ul>
+        <div class="tab-content">
+        <div class="tab-pane fade in active" id="approved">      <table class="table table-striped table-hover ">
         <thead>
           <tr>
             <th class="col-sm-1">#</th>
@@ -81,7 +86,8 @@
     </li>
   </ul>
 </nav>
-      <h2>Disabled articles</h2>
+</div>
+        <div class="tab-pane fade" id="denied">    
       <table class="table table-striped table-hover ">
         <thead>
           <tr>
@@ -136,9 +142,15 @@
     </li>
   </ul>
 </nav>
+</div>
+    </div>
+</div>
+
+
+
     </div>
     <!-- Display at start -->
       <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
-      <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+      <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     </body>
   </html>

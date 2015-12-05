@@ -5,7 +5,6 @@
       <link rel="stylesheet" href="assets/css/main.css"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-      <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
 
@@ -28,10 +27,11 @@
         <thead>
           <tr>
             <th class="col-sm-1">#</th>
-            <th class="col-sm-5">Title</th>
+            <th class="col-sm-3">Title</th>
             <th class="col-sm-2">URL</th>
-            <th class="col-sm-2">Onion?</th>
-            <th class="col-sm-3">Actions</th>
+            <th class="col-sm-1">Onion?</th>
+            <th class="col-sm-1">NSFW?</th>
+            <th class="col-sm-4">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -40,9 +40,11 @@
             <td>British astronaut to run London Marathon in space</td>
             <td><a href="http://olympics.nbcsports.com/2015/12/04/british-astronaut-london-marathon-space-tim-peake/">http://olympics.nbcsports.com/2015/12/04/briti...</td>
             <td>No</td>
+            <td>No</td>
             <td>
               <a href="#" class="btn btn-danger btn-xs">Remove</a>
               <a href="#" class="btn btn-primary btn-xs">Edit Title</a>
+              <a href="#" class="btn btn-danger btn-xs">Mark NSFW</a>
             </td>
 
           </tr>
@@ -51,9 +53,11 @@
             <td>British astronaut to run London Marathon in space</td>
             <td><a href="http://olympics.nbcsports.com/2015/12/04/british-astronaut-london-marathon-space-tim-peake/">http://olympics.nbcsports.com/2015/12/04/briti...</td>
             <td>No</td>
+            <td>No</td>
             <td>
               <a href="#" class="btn btn-danger btn-xs">Remove</a>
               <a href="#" class="btn btn-primary btn-xs">Edit Title</a>
+              <a href="#" class="btn btn-danger btn-xs">Mark NSFW</a>
             </td>
           </tr>
   </tbody>

@@ -8,5 +8,7 @@ var getArticle = function() {
 	var xhttp;
 	xhttp = new XMLHttpRequest();
 
-	xhttp.open("POST", "http://onionornot.net/fetch.php", true)
+	xhttp.open("POST", "http://onionornot.net/assets/php/fetch.php", true);
+	xhttp.send();
+	mainResponse.text(xhttp.resposeText);
 }

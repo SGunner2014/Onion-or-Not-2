@@ -27,14 +27,16 @@
     <div class="container" pos>
       <br><br>
         <h1 class="header center black-text"></h1>
-        <h1 class="mainResponse"></h1>
+        <h1 class="mainResponse"></h1> <!--Where the text will be-->
     </div>
-      <div class="row center">
-      <!-- The Yes/No buttons will probably be here -->
-      </div>
       <br><br>
 
     </div>
+      <div class="container options">
+        <button class="btn btn-large btn-success yes col-sm-5">Onion!</button>
+        <div class="col-sm-2"></div>
+        <button class="btn btn-large btn-success no col-sm-5">Not Onion!</button>
+      </div>
         <div class="container well navbar-fixed-bottom">
       <div class="col-sm-2">
         <h3>Useful Links</h3>
@@ -54,6 +56,13 @@
 
       <script type="text/javascript" src="assets/js/jquery-2.1.4.min.js"></script>
       <script type="text/javascript" src="assets/js/fetch.js"></script>
-      <script type="text/javascript">getArticle();</script>
+      <script type="text/javascript" src="assets/js/play.js"></script>
     </body>
   </html>
+
+
+    <div class="playButton well"> 
+      <h1>Play Now!</h1>
+      <br/>
+      <button class="btn btn-large btn-success playButton-btn">Play</button>
+    </div>

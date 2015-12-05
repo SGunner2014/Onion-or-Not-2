@@ -2,14 +2,25 @@
 
 /* Add custom CSS AFTER here */
 .playButton {
-	display: block;
 	position: absolute;
-	top: 10%;
 	left: 10%;
+	top: 10%;
 	width: 80%;
-	height: 80%;
+	height: 50%;
+	background-color: #CCCCCC;
+	text-align: center;
+}
+
+.playButton-btn {
+	width:100%;
+	height:80%;
+	font-size: 2em;
 }
 
 .playAgain {
-	display:none;
+	display: none;
+}
+
+.options {
+	display: none;
 }

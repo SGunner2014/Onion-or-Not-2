@@ -45,7 +45,7 @@
     <div class="container well navbar-fixed-bottom">
       <div class="col-sm-2">
         <h3>Useful Links</h3>
-        <a href="https://twitter.com/JamesHurc"><h6>ElephantLocator's Twitter</h6></a>
+        <a href="https://twitter.com/JamesHurc"><h6>elephantLocator's Twitter</h6></a>
         <a href="https://twitter.com/rennuGmaS"><h6>SGunner2014's Twitter</h6></a>
       </div>
       <div class="col-sm-3">

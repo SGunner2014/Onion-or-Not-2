@@ -4,7 +4,7 @@
     <!-- Import google font thing -->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- Import css -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="assets/css/main.css"/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
       <!--Let browser know website is optimized for mobile-->

@@ -11,7 +11,7 @@ var getArticle = function() {
 	xhttp.open("GET", "/assets/php/fetch.php", false);
 	xhttp.send();
 	var response = JSON.parse(xhttp.responseText);
-	if (response.Onion === 1) {
+	if (response.Onion === "1") {
 		correct_answer = true;
 	}else {
 		correct_answer = false;

@@ -19,7 +19,7 @@ $(document).ready(function() {
 	});
 
 	$('.playAgain').click(function() {
-		$('.playAgain').fadeOut();
+		$('.playAgain').hide();
 		getArticle();
 		$('.options').fadeIn();
 	});

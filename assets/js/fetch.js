@@ -16,6 +16,9 @@ var getArticle = function() {
 	}else {
 		correct_answer = false;
 	}
+
+	$('.mainResponse').hide();
 	$('.mainResponse').text(response.Title);
+	$('.mainResponse').slideDown();
 
 }

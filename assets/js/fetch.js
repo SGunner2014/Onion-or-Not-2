@@ -2,7 +2,7 @@
 	A JavaScript file to fetch and display the new articles, upon loading the page or clicking of the 'play again' button.
 */
 
-
+var correct_answer;
 
 var getArticle = function() {
 	var xhttp;
@@ -10,5 +10,12 @@ var getArticle = function() {
 
 	xhttp.open("GET", "/assets/php/fetch.php", false);
 	xhttp.send();
-	$('.mainResponse').text(xhttp.responseText);
+	var response = JSON.parse(xhttp.responseText);
+	if (response.Onion === true) {
+		correct_answer = true;
+	}else {
+		correct_answer = false;
+	}
+	$('.mainResponse').text(response.Title);
+
 }

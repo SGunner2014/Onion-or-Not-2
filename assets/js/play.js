@@ -8,11 +8,13 @@ $(document).ready(function() {
 
 	$('.yes').click(function() {
 		$('.options').hide();
+		updateCorrect(true);
 		$('.playAgain').fadeIn();
 	});
 
 	$('.no').click(function() {
 		$('.options').hide();
+		updateCorrect(false);
 		$('.playAgain').fadeIn();
 	});
 
@@ -23,3 +25,13 @@ $(document).ready(function() {
 	});
 
 });
+
+var updateCorrect = function(answer) {
+	if (correct_answer === answer) {
+		$('.wrong').hide();
+		$('.correct').show();
+	} else {
+		$('.correct').hide();
+		$('.wrong').show();
+	}
+}

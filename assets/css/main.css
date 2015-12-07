@@ -31,3 +31,16 @@
 .options {
 	display: none;
 }
+
+/* Admin Page */
+
+.error {
+	display:none;
+	position: absolute;
+	left: 10%;
+	top: 30%;
+	width: 80%;
+	height: 40%;
+	background-color: #CCCCCC;
+	text-align: center;
+}

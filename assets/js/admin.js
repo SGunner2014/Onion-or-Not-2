@@ -1,26 +1,27 @@
 /*
 	A JavaScript file to fetch and display articles for use on the admin panel
 */
-
+var page = 1;
+var strData;
+var xhttp;
 
 $(".PageChange").click(function() {
-	var page= 1;
 
-    function addCount(){
-     page+1;
-    }
+    page++;
 
 });
 
-var getArticle = function() {
-
-    var xhttp;
+var displayArticles = function(mode, from, number) {
+    //Mode = either "allowed" or "denied"
+    //From = number of article to start from
+    //Number = number of articles to fetch, INCLUDING from.
     xhttp = new XMLHttpRequest();
-    var number= 10
-    var from= page+10-9
-    xhttp.open("GET", "/assets/php/fetch.php", false);
-    xhttp.send("number=" + number + "&from=" + from);
-    $('.mainResponse').text(xhttp.responseText);
-
+    if (mode === "allowed") {
+        strData = "mode=allowed&from=" + from + "&number=" + number;
+    } else {
+        strData = "mode=denied&from=" + from + "&number=" + number;
+    }
+    xhttp.open("GET", "/assets/php/admin.php", false);
+    xhttp.send(strData);
+    displayTable(JSON.parse(xhttp.responseText));
 }
-

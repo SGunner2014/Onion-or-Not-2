@@ -29,6 +29,7 @@
     </ul>
         <div class="tab-content">
         <div class="tab-pane fade in active" id="approved">      <table class="table table-striped table-hover ">
+      <table class="table table-striped table-hover admin-table-main-allowed">
         <thead>
           <tr>
             <th class="col-sm-1">#</th>
@@ -39,32 +40,7 @@
             <th class="col-sm-4">Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>British astronaut to run London Marathon in space</td>
-            <td><a href="http://olympics.nbcsports.com/2015/12/04/british-astronaut-london-marathon-space-tim-peake/">http://olympics.nbcsports.com/2015/12/04/briti...</td>
-            <td>No</td>
-            <td>No</td>
-            <td>
-              <a href="#" class="btn btn-danger btn-xs">Remove</a>
-              <a href="#" class="btn btn-primary btn-xs">Edit Title</a>
-              <a href="#" class="btn btn-danger btn-xs">Mark NSFW</a>
-            </td>
-
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>British astronaut to run London Marathon in space</td>
-            <td><a href="http://olympics.nbcsports.com/2015/12/04/british-astronaut-london-marathon-space-tim-peake/">http://olympics.nbcsports.com/2015/12/04/briti...</td>
-            <td>No</td>
-            <td>No</td>
-            <td>
-              <a href="#" class="btn btn-danger btn-xs">Remove</a>
-              <a href="#" class="btn btn-primary btn-xs">Edit Title</a>
-              <a href="#" class="btn btn-danger btn-xs">Mark NSFW</a>
-            </td>
-          </tr>
+        <tbody class="admin-table-body-allowed">
   </tbody>
 
 </table> 
@@ -76,7 +52,7 @@
 </nav>
 </div>
         <div class="tab-pane fade" id="denied">    
-      <table class="table table-striped table-hover ">
+      <table class="table table-striped table-hover admin-table-main-denied">
         <thead>
           <tr>
             <th class="col-sm-1">#</th>
@@ -87,28 +63,7 @@
             <th class="col-sm-4">Actions</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>British astronaut to run London Marathon in space</td>
-            <td><a href="http://olympics.nbcsports.com/2015/12/04/british-astronaut-london-marathon-space-tim-peake/">http://olympics.nbcsports.com/2015/12/04/briti...</td>
-            <td>No</td>
-            <td>No</td>
-            <td>
-              <a href="#" class="btn btn-success btn-xs">Add</a>
-            </td>
-
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>British astronaut to run London Marathon in space</td>
-            <td><a href="http://olympics.nbcsports.com/2015/12/04/british-astronaut-london-marathon-space-tim-peake/">http://olympics.nbcsports.com/2015/12/04/briti...</td>
-            <td>No</td>
-            <td>No</td>
-            <td>
-              <a href="#" class="btn btn-success btn-xs">Add</a>
-            </td>
-          </tr>
+        <tbody class="admin-table-body-denied">
   </tbody>
 </table> 
 </table> 

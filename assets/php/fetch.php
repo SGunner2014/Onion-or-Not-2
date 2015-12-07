@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 function getTitles() {
 	$endArray = array();
 
-	$feed = file_get_contents('https://www.reddit.com/r/nottheonion/hot.json?limit=10');
+	$feed = file_get_contents('https://www.reddit.com/r/nottheonion/hot.json?limit=25');
 	$array = json_decode($feed, true)['data']['children'];
 	foreach ($array as $post) {
 		if (!($post['data']['domain'] === "self.nottheonion")) {
@@ -27,7 +27,7 @@ function getTitles() {
 		}
 	}
 
-	$feed = file_get_contents('https://www.reddit.com/r/TheOnion/hot.json?limit=10');
+	$feed = file_get_contents('https://www.reddit.com/r/TheOnion/hot.json?limit=25');
 	$array = json_decode($feed, true)['data']['children'];
 	foreach ($array as $post) {
 		if (!($post['data']['domain'] === "self.theonion")) {

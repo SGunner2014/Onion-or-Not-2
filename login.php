@@ -41,7 +41,10 @@
         </div>
       </form>
     </div>
-    <div class="container well navbar-fixed-bottom">
+
+    <!-- Footer -->
+    
+   <div class="container well navbar-fixed-bottom">
       <div class="col-sm-2">
         <h3>Useful Links</h3>
         <a href="https://twitter.com/JamesHurc"><h6>elephantLocator's Twitter</h6></a>
@@ -50,6 +53,7 @@
       <div class="col-sm-3">
         <h3>Some of our own links</h3>
         <a href="http://onionornot.net/about.html"><h6>About us</h6></a>
+        <a href="http://onionornot.net/license.html"><h6>License</h6></a>
         <a href="http://onionornot.net/privacy.html"><h6>Privacy &#38; Security</h6></a>
       </div>
       <div class="col-sm-7">

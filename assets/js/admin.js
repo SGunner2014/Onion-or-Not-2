@@ -17,7 +17,25 @@ $('.error-close').click(function() {
     $('.error').slideUp();
 });
 
+
+
 //Standard functions
+
+var changeArticle = function(mode, ID, newValue) {
+switch(mode) {
+    case "makeNSFW":
+        changeNSFWState(ID, 1, user, pass);
+        break;
+    case "makeSFW":
+        changeNSFWState(ID, 0, user, pass);
+        break;
+    case "disableArticle":
+        disableArticle(ID, user, pass);
+        break;
+    case "enableArticle":
+        enableArticle(ID, user, pass);
+        break;
+}
 
 var displayArticles = function(mode, from, number) {
     //Mode = either "allowed" or "denied"

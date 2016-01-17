@@ -67,6 +67,23 @@
 			} else {
 				echo json_encode(array("state" => "0", "error" => "One or more variables were not set."));
 			}
+		} elseif ($mode === "changeNSFWState") {
+			if isset($_POST['newState'] and isset($_POST['user']) and isset($_POST['pass'])) {
+				$pass = hash("sha256", $_POST['pass']);
+				$ID  = $_POST['ID'];
+				$newState = $_POST['newState'];
+				$usr = $_POST['user'];
+
+				if(loginIsValid($user, $pass, $conn)) {
+					$query = "UPDATE articles_enabled SET NSFW='".$newState."' WHERE ID = '".$ID."'";
+					$conn->query($query);
+					echo json_encode(array("state" => "1", "error" => "null"));
+				} else {
+					echo json_encode(array("state" => "0", "error" => "Invalid Credentials."));
+				}
+			} else {
+				echo json_decode(array("state" => 0, "error" => "One or more variables were not set"));
+			}
 		}
 	}
 

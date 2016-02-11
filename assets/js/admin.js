@@ -1,7 +1,14 @@
 /*
 	A JavaScript file to fetch and display articles for use on the admin panel
 */
+
+/*
+    The PHP should output the user and password, if they are contained within the session data. This way, the javascript can use the data to login to the server
+    and perform operations on the database.
+*/
+
 var from = 1;
+var page = 1;
 var number = 10;
 var strData;
 var xhttp;
@@ -9,8 +16,12 @@ var results;
 
 //jQuery Section
 
-$(".PageChange").click(function() {
+$(".pageUp").click(function() {
     page++;
+});
+
+$(".pageDown").click(function() {
+    page--;
 });
 
 $('.error-close').click(function() {
@@ -42,6 +53,7 @@ var displayArticles = function(mode, from, number) {
     //From = number of article to start from
     //Number = number of articles to fetch, INCLUDING from.
     xhttp = new XMLHttpRequest();
+    from = (page * 10) - 9;
     if (mode === "allowed") {
         strData = "mode=allowed&from=" + from + "&number=" + number;
     } else {
@@ -92,6 +104,13 @@ var changeNSFWState = function(ID, newState, user, pass) {
     }
 }
 
+var onPageLoad = function() {
+    if (user !== null and pass !== null) {
+        displayArticles("allowed", from, number);
+    } else {
+        displayError("Could not login. No login details were passed.");
+    }
+}
 var disableArticle = function(ID, user, pass) {
     if (ID !== null) {
         strData = "ID=" + ID + "&user=" + user + "&pass=" + pass; //Will be passed using POST, not GET
